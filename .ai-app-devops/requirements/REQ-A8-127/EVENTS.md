@@ -1,0 +1,13 @@
+# REQ-A8-127 events
+
+<!--
+Append-only. One row per verified event. Never rewrite or reorder a row.
+-->
+
+| Event | Source | Gate | Gate ID | Prior -> next revision | JEV Decision | Confidence | Evidence IDs | Validation | Coordinator Action | Idempotency key |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| EVT-001 | Linear comment 4a0db25e-9599-402d-b2b1-2c30c9dc4004 (A8-127) | human_confirmation | `human-confirmation-REQ-A8-127-r2` | 1 -> 2 | CONFIRMED | 0.74 | human-confirmation-REQ-A8-127-r2 | Decision enum valid; confidence 0.74 < min_confidence 0.90; mode shadow so recorded, non-blocking; deterministic reply match, revision match, and idempotency checks all passed; JEV is a non-blocking shadow evidence item | Confirmed draft frozen as spec.md revision 2; materialization proceeded on deterministic evidence | `bd-confirm-ec105816-6d88-4d83-b90f-ec6e912f392e-r2` |
+| EVT-002 | Local intake A8-127 | - | - | 2 -> 2 | - | - | SOURCE-MANIFEST.md | spec.md frozen from issue-created DRAFT-SPEC.md revision 2 (heading only: "Draft requirement specification" -> "Requirement specification") | Frozen specification recorded | `bd-spec-freeze-ec105816-6d88-4d83-b90f-ec6e912f392e-r2` |
+| EVT-003 | Linear issue A8-128 | - | - | - | - | - | A8-128 | Child description replaced in full with confirmed spec.md revision 2 and read back; child alone moved to Requirement Done (completedAt 2026-09-21T18:59:43.863Z) | Requirement Spec child synced and completed; main issue not moved | `bd-spec-child-ec105816-6d88-4d83-b90f-ec6e912f392e-r2` |
+| EVT-004 | GitHub air8uatrepo | - | - | - | - | - | gh repo view air8uatrepo/sales-crm-mvp | Repository exists, owner air8uatrepo, visibility PUBLIC, default branch master | NEW repository created and verified public | `bd-repo-sales-crm-mvp-r2` |
+| EVT-005 | Local delivery identity | - | - | - | - | - | 0fa0334427a3f0ebb7670b6a57fff9da178066ce | Canonical checkout C:/aiproject/sales-crm-mvp on master at 0fa0334; branch req/REQ-A8-127; worktree C:/aiproject/.worktrees/sales-crm-mvp/REQ-A8-127; root AGENTS.md present with no leftover placeholder | Delivery identity recorded and read back | `bd-delivery-identity-ec105816-6d88-4d83-b90f-ec6e912f392e-r2` |
