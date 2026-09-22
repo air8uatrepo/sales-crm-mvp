@@ -2,8 +2,8 @@
 workflow_type: business_direct_app_v1
 project_mode: NEW
 status: BUILDING_PREVIEW
-pending_action: AWAIT_NEXT_PHASE_TRIGGER
-execution_cursor: MATERIALIZATION_COMPLETE
+pending_action: DISPATCH_DEVELOPER
+execution_cursor: BUILDING_PREVIEW
 application_id: sales-crm-mvp
 requirement_id: REQ-A8-127
 run_id: ec105816-6d88-4d83-b90f-ec6e912f392e
@@ -11,21 +11,21 @@ branch: req/REQ-A8-127
 worktree_path: C:/aiproject/.worktrees/sales-crm-mvp/REQ-A8-127
 base_sha: 0fa0334427a3f0ebb7670b6a57fff9da178066ce
 thread_id: null
-state_revision: 1
+state_revision: 3
 repair_count: 0
 clarification_round: 0
 local_clarification_revision: 0
 last_processed_comment_id: 4a0db25e-9599-402d-b2b1-2c30c9dc4004
 last_processed_comment_at: 2026-09-21T18:46:46.044Z
 linear_issue_id: ec105816-6d88-4d83-b90f-ec6e912f392e
-linear_sync_revision: 1
+linear_sync_revision: 2
 linear_timeline_comment_id: null
 linear_reply_request_comment_id: ac353f20-404f-44a9-a7e9-47de467ddb9c
 linear_spec_issue_id: 93e53960-6199-4c9b-9176-8ea4d07cae68
 linear_spec_synced_revision: 2
 linear_spec_synced_at: 2026-09-21T19:00:45.245Z
-linear_mirrored_milestone: Requirement Done (spec child only)
-application_lock: null
+linear_mirrored_milestone: Developing
+application_lock: .ai-app-devops/applications/sales-crm-mvp/LOCK.md
 jev_mode: shadow
 jev_last_gate: human_confirmation
 jev_last_gate_id: human-confirmation-REQ-A8-127-r2
@@ -56,3 +56,15 @@ Bounded materialization checkpoint stopped here. No application code was
 implemented, no Vercel project or deploy workflow was created, and no preview or
 production deployment was run. The next configured phase trigger continues the
 workflow.
+## Coordinator handoff (automatic, verified materialization)
+
+Automatic coordinator handoff after confirmed-materialization reply
+4a0db25e-9599-402d-b2b1-2c30c9dc4004. The business confirmation is already
+accepted and materialization completed, so no further business reply and no
+Linear Start * state is awaited.
+
+Single application lock created and read back at
+.ai-app-devops/applications/sales-crm-mvp/LOCK.md (lock_revision 1). Cursor
+advanced from MATERIALIZATION_COMPLETE to BUILDING_PREVIEW; the next action is
+to dispatch the Business Direct developer role against this exact worktree and
+the frozen spec.md revision 2.

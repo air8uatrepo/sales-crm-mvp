@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "migrations": [
+    {
+      "filename": "20260922_110057_sales_crm_mvp.sql",
+      "sha256": "5e195544c7b34a8d3601fa967752613e3ebd415d6f2473c278b947fc4663b930"
+    }
+  ]
+}

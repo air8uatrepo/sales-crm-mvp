@@ -15,3 +15,4 @@ Append-only. One row per outbound Linear item. Never rewrite or reorder a row.
   with the current `spec.md`.
 - `state_mirror` - a milestone state write. This row is the Requirement Spec
   child's own completion; the main issue A8-127 was not moved.
+| developing-mirror-REQ-A8-127 | state_mirror | Linear issue A8-127 | 2 | `bd-linear-developing-ec105816-6d88-4d83-b90f-ec6e912f392e-REQ-A8-127` | Main issue state read back as Developing |
